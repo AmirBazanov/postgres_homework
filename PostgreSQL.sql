@@ -39,7 +39,7 @@ create table movies(movie_id BIGSERIAL PRIMARY KEY,
                     mpaa_raiting varchar(10),
                     oscar_count int);
                     
-CREATE TABLE viewers(vievers_id BIGINT PRIMARY KEY,fk_movie_id BIGINT REFERENCES movies(movie_id), fk_counry BIGINT REFERENCES counries(counry_id), view_count int);
+CREATE TABLE viewers(viewers_id BIGINT PRIMARY KEY,fk_movie_id BIGINT REFERENCES movies(movie_id), fk_counry BIGINT REFERENCES counries(counry_id), view_count int);
                     
 CREATE TABLE movie_actors(movie_id bigint REFERENCES movies(movie_id), actor_id bigint REFERENCES actors(actor_id), CONSTRAINT pk_movie_actor PRIMARY key (movie_id, actor_id));
 
